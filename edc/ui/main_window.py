@@ -2174,7 +2174,7 @@ class MainWindow(QMainWindow):
             lines.append(f"Controlling Faction: {self.state.controlling_faction}")
 
         meta = []
-        allegiance = fmt.text(getattr(self.state, "system_allegiance", None))
+        allegiance = self._norm_token(getattr(self.state, "system_allegiance", None))
         government = self._norm_token(getattr(self.state, "system_government", None))
         security = self._norm_token(getattr(self.state, "system_security", None))
         economy = self._norm_token(getattr(self.state, "system_economy", None))

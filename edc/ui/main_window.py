@@ -1846,6 +1846,8 @@ class MainWindow(QMainWindow):
             est = rec.get("EstimatedValue")
             dist = rec.get("DistanceLS")
             pc = rec.get("PlanetClass") or ""
+            # Normalize Frontier token-ish planet class strings for display
+            pc_disp = self._norm_token(pc) or fmt.text(pc, default="")
             tf = rec.get("Terraformable", False)
             mapped = rec.get("Mapped", False)
             first = rec.get("FirstDiscovered", False)
@@ -1878,7 +1880,7 @@ class MainWindow(QMainWindow):
                 dist_txt = (fmt.int_commas(dist) + " LS") if isinstance(dist, (float, int)) else ""
                 est_txt = fmt.credits(est, default="?")
                 tag_txt = (" [" + ", ".join(preview_tags) + "]") if preview_tags else ""
-                preview_line = f"{body} — {pc} — {dist_txt} — {est_txt}{tag_txt}".strip()
+                preview_line = f"{body} — {pc_disp} — {dist_txt} — {est_txt}{tag_txt}".strip()
                 if (best_below is None) or (est > best_below[0]):
                     best_below = (est, preview_line)
 
@@ -1905,7 +1907,7 @@ class MainWindow(QMainWindow):
             bio_txt = str(bio) if isinstance(bio, int) and bio > 0 else ""
             geo_txt = str(geo) if isinstance(geo, int) and geo > 0 else ""
             genera_txt = ", ".join([fmt.text(x, default="") for x in gen if fmt.text(x, default="")]) if isinstance(gen, list) and gen else ""
-            rows.append((sort_val, fmt.text(body, default=""), fmt.text(pc, default=""), dist_txt, bio_txt, geo_txt, genera_txt, est_txt, tags_txt))
+            rows.append((sort_val, fmt.text(body, default=""), pc_disp, dist_txt, bio_txt, geo_txt, genera_txt, est_txt, tags_txt))
 
         rows.sort(key=lambda x: x[0], reverse=True)
 

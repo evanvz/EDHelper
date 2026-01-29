@@ -6,3 +6,5 @@ settings/*.bak
 .venv/
 venv/
 .env
+project_instructions.txt
+settings.json

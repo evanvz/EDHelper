@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "systems": {
+    "Sol": [
+      { "category": "tourist", "title": "Tourist Beacon: Example", "body": "Sol A 3", "note": "Short note", "source": "manual" }
+    ]
+  },
+  "system_addresses": {
+    "10477373803": [
+      { "category": "canonn", "title": "Guardian Site", "body": "Body X A 1", "note": "Bring SRV", "source": "local" }
+    ]
+  }
+}

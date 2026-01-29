@@ -1,0 +1,162 @@
+{
+  "last_updated": "2026-01-26",
+  "farming_locations": {
+    "encoded": [
+      {
+        "name": "Jameson's Crashed Cobra",
+        "system": "HIP 12099",
+        "body": "1 B A",
+        "method": "Scan private data beacon + relog",
+        "key_materials": ["Datamined Wake Exceptions", "Atypical Disrupted Wake Echoes", "Adaptive Encryptors Capture", "Unusual Encrypted Files", "Modified Consumer Firmware", "Strange Wake Solutions"]
+      },
+      {
+        "name": "High Wake Scans",
+        "method": "Scan high wakes in high-pop anarchy/distribution systems",
+        "key_materials": ["Datamined Wake Exceptions", "Eccentric Hyperspace Trajectories"]
+      },
+      {
+        "name": "HGE Pharmaceutical Isolators",
+        "method": "Boom state systems via Inara/EDDB",
+        "key_materials": ["Pharmaceutical Isolators"]
+      }
+    ],
+    "raw": [
+      {
+        "name": "Crystalline Shards",
+        "sites": [
+          {"system": "HIP 36601", "body": "C 1 d", "coords": "-0.3, -1.2", "materials": ["Polonium", "Ruthenium", "Tellurium", "Technetium"]},
+          {"system": "Outotz LS-K d8-4", "body": "B 1 a", "materials": ["Selenium", "Polonium", "Ruthenium"]},
+          {"system": "Delkar", "body": "7 C a", "materials": ["Antimony", "Ruthenium", "Polonium"]}
+        ],
+        "method": "Shoot shards, scoop/SRV limpets"
+      },
+      {
+        "name": "Brain Trees",
+        "sites": [
+          {"system": "Hyades Sector RO-Q b5-2", "body": "A 2", "materials": ["Selenium", "Germanium", "Arsenic"]},
+          {"system": "Kappa-1 Volantis", "body": "B 3 f a", "materials": ["Selenium", "Germanium"]},
+          {"system": "HR 3230", "body": "3 A", "materials": ["Selenium", "Germanium"]}
+        ],
+        "method": "Flak/limpets on tall trees, fly up to collect"
+      },
+      {
+        "name": "Crashed Anaconda",
+        "sites": [
+          {"system": "Orrere", "body": "2 B", "coords": "30-40° lat", "materials": ["Antimony", "Ruthenium", "Zirconium"]},
+          {"system": "Kolo Disci", "body": "C 6 a", "materials": ["High G4 raw"]},
+          {"system": "HIP 16613", "body": "1 A", "materials": ["High G4 raw"]},
+          {"system": "Alshat", "body": "A 6 b", "materials": ["High raw"]}
+        ],
+        "method": "Shoot cargo racks, collect"
+      }
+    ],
+    "manufactured": [
+      {
+        "name": "High Grade Emissions (HGE)",
+        "method": "Anaconda w/ limpets; Inara HGE finder; drop/relog",
+        "examples": [
+          {"material": "Pharmaceutical Isolators", "state": "Boom"},
+          {"material": "Imperial Shielding", "state": "Outbreak"},
+          {"material": "Core Dynamics Composites", "state": "Civil War"},
+          {"material": "Military Grade Alloys", "state": "War/Civil War"},
+          {"material": "Proto Heat Radiators", "state": "Boom"}
+        ]
+      },
+      {
+        "name": "Combat/CZ",
+        "method": "Low CZ or massacre missions",
+        "key_materials": ["G4-G5 manufactured"]
+      }
+    ],
+    "odyssey_onfoot": [
+      {
+        "name": "Arai's Mine",
+        "system": "Iah Bulu",
+        "body": "4 A",
+        "method": "Abandoned settlement: cut panels, loot",
+        "note": "Crowded but reliable"
+      },
+      {
+        "name": "Pirate Attack Settlements",
+        "method": "Find via galaxy map (Pirate Attack state), raid/loot",
+        "key_materials": ["All on-foot mats"]
+      },
+      {
+        "name": "Martins Shelter",
+        "system": "Unnamed (zero pop)",
+        "method": "Settlement looting, no alarms",
+        "key_materials": ["Odyssey assets/data"]
+      }
+    ],
+    "guardian": [
+      {
+        "name": "Module Blueprint Site",
+        "system": "Synuefe NL-N c23-4",
+        "body": "B 3",
+        "method": "Activate relic tower, kill sentinels, loot panels; relog",
+        "key_materials": ["Guardian Module Blueprint Fragment", "Technology Components"]
+      },
+      {
+        "name": "Weapon Blueprint Site",
+        "system": "Synuefe EU-Q c21-10",
+        "body": "A 3",
+        "method": "Activate relic tower, kill sentinels, loot",
+        "key_materials": ["Guardian Weapon Blueprint Fragment"]
+      },
+      {
+        "name": "Vessel Blueprint Site",
+        "system": "Synuefe EU-Q c21-15",
+        "body": "A 1",
+        "method": "Get Ancient Key from Synuefe KU-F b44-4; activate 6 pylons, scan orb",
+        "key_materials": ["Guardian Vessel Blueprint Fragment"]
+      },
+      {
+        "name": "Tech Components",
+        "system": "Synuefe HT-F D12-29",
+        "body": "C 3",
+        "method": "Loot top panels on pylons, kill sentinels",
+        "key_materials": ["Guardian Technology Components"]
+      },
+      {
+        "name": "Obelisk Data",
+        "sites": [
+          {"system": "Vela Dark Region KR-W c1-24", "body": "7 A"},
+          {"system": "Synuefe TP-F B44-0", "body": "CD 1"}
+        ],
+        "method": "Scan active obelisks, relog"
+      }
+    ],
+    "thargoid": [
+      {
+        "name": "Scout NHSS",
+        "systems": ["Asterope (Pleiades)", "Pleiades/Witch Head/Coal Sack nebulas"],
+        "method": "AX ship, kill scouts, limpets on wreckage",
+        "key_materials": ["Thargoid Biological Matter", "Sensors", "Heart"]
+      },
+      {
+        "name": "Interceptor AX",
+        "locations": ["Maelstroms (e.g. Taranis)", "Pleiades"],
+        "method": "AX combat, collect hearts/sensors from debris",
+        "key_materials": ["Thargoid Heart", "Biological Matter", "Sensors"]
+      },
+      {
+        "name": "Titan Tissues",
+        "locations": ["Thargoid Titans/Maelstrom surfaces"],
+        "method": "On-foot/SRV scan/sample",
+        "key_materials": ["Thargoid Tissue Sample"]
+      }
+    ]
+  },
+  "bgs_tips": {
+    "hge_states": {
+      "Pharmaceutical Isolators": "Boom",
+      "Imperial Shielding": "Outbreak",
+      "Core Dynamics Composites": "Civil War",
+      "Military Grade Alloys": "War",
+      "Proto Light Alloys": "Boom",
+      "Proto Heat Radiators": "Boom"
+    },
+    "tools": ["Inara Nearest HGE", "EDGalaxy HGE Finder"],
+    "method": "Filter galaxy map: High pop, target state; Anaconda + limpets; relog sites"
+  }
+}

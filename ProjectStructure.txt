@@ -1,0 +1,38 @@
+EDHelper/
+│
+├─ main.py                     # entrypoint (correctly tiny)
+├─ planet_values.json          # data-only
+├─ exo_values.json             # data-only
+│
+├─ edc/
+│  ├─ app.py                   # app bootstrap
+│  ├─ config.py                # portable settings + defaults
+│  │
+│  ├─ core/                    # DOMAIN LOGIC (excellent)
+│  │  ├─ journal_watcher.py    # IO + threading boundary
+│  │  ├─ event_engine.py       # rules + state mutation
+│  │  ├─ state.py              # single source of truth
+│  │  ├─ planet_values.py      # exploration valuation
+│  │  ├─ exo_values.py         # exobiology valuation
+│  │  ├─ external_intel.py     # advisory POIs
+│  │  ├─ farming_locations.py  # advisory farming
+│  │
+│  ├─ ui/
+│  │  ├─ main_window.py        # rendering only (mostly)
+│  │  ├─ settings_dialog.py
+│  │
+│  ├─ utils/
+│  │  └─ log.py                # logging config
+│  │
+│  ├─ engine/
+│  │    ├─ handlers/
+│  │	│   ├─ exobio.py
+│  │	│   ├─ exploration.py
+│  │	│   ├─ inventory.py
+│  │    │   ├─ misc.py
+│  │	│   ├─ powerplay.py
+│		
+└─ settings/
+   ├─ settings.json
+   ├─ external_pois.json
+   ├─ elite_farming_locations.json

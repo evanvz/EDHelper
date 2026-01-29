@@ -1,0 +1,1018 @@
+{
+  "last_updated": "",
+  "items": [
+    {
+      "name": "Agricultural Sample",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Air Quality Reports",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "STO buildings",
+        "PWR buildings",
+        "IND buildings",
+        "HAB buildings",
+        "EXT buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Atmospheric Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "RES buildings",
+        "IND buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 11
+    },
+    {
+      "name": "Audio Logs",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Settlements",
+        "Mission reward"
+      ],
+      "used": 11
+    },
+    {
+      "name": "Ballistics Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 7
+    },
+    {
+      "name": "Biological Sample",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "STO buildings",
+        "AGRI buildings"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Biometric Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 18
+    },
+    {
+      "name": "Blood Test Results",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Cat Media",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Chemical Experiment Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Chemical Formulae",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Chemical Inventory",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "EXT buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Chemical Patents",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Classic Entertainment",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Clinical Trial Records",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Cocktail Recipes",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Combat Training Material",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 25
+    },
+    {
+      "name": "Combatant Performance",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 25
+    },
+    {
+      "name": "Compression-Liquefied Gas",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "PWR buildings",
+        "IND buildings",
+        "EXT buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 16
+    },
+    {
+      "name": "Computer Parts",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Culinary Recipes",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Data Storage Device",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Digital Designs",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "Mission reward"
+      ],
+      "used": 15
+    },
+    {
+      "name": "Electronics Package",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Employee Genetic Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "MED room",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Energy Regulator",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Evacuation Protocols",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "PWR buildings",
+        "IND buildings",
+        "HAB buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Experiment Prototype",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Extraction Sample",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Extraction Yield Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "EXT buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Faction Associates",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Financial Projections",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "AGRI buildings",
+        "IND buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "G-Meds",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "MED room",
+        "RES buildings",
+        "CMD buildings",
+        "AGRI buildings",
+        "Settlements",
+        "Mission reward",
+        "Surface crash site"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Gene Sequencing Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Genetic Repair Meds",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "STO buildings",
+        "RES buildings",
+        "IND buildings",
+        "EXT buildings",
+        "AGRI buildings"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Genetic Research",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Health Monitor",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward",
+        "Surface crash site"
+      ],
+      "used": 12
+    },
+    {
+      "name": "Industrial Component",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Industrial Machinery",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Insight Entertainment Suite",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Settlements"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Inventory Record",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Ionised Gas",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "PWR buildings",
+        "IND buildings",
+        "EXT buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 28
+    },
+    {
+      "name": "Maintenance Logs",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "PWR buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Manufacturing Instructions",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "EXT buildings",
+        "RES buildings",
+        "IND buildings",
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 57
+    },
+    {
+      "name": "Medical Records",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Medical Sample",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Military Schematic",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Mineral Survey",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "IND buildings",
+        "EXT buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Mining Analytics",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "IND buildings",
+        "EXT buildings",
+        "Mission reward"
+      ],
+      "used": 22
+    },
+    {
+      "name": "Multimedia Entertainment",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "NOC Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Operational Manual",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "IND buildings",
+        "CMD buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 33
+    },
+    {
+      "name": "Opinion Polls",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Patrol Routes",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 14
+    },
+    {
+      "name": "Personal Protective Equipment",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Pharmaceutical Patents",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "MED room",
+        "RES buildings",
+        "CMD buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Power Association Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Classified Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Industrial Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Injection Malware",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Megaship Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Political Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Regulator",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Settlements"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Power Research Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Power Tracker Malware",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Production Reports",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 14
+    },
+    {
+      "name": "Production Schedule",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "AGRI buildings",
+        "Mission reward"
+      ],
+      "used": 11
+    },
+    {
+      "name": "Push",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "Surface crash site"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Radioactivity Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "PWR buildings",
+        "IND buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 6
+    },
+    {
+      "name": "Reactor Output Review",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "PWR buildings",
+        "Mission reward"
+      ],
+      "used": 9
+    },
+    {
+      "name": "Recycling Logs",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "IND buildings",
+        "HAB buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Research Notes",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Risk Assessments",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 14
+    },
+    {
+      "name": "Security Expenses",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 11
+    },
+    {
+      "name": "Security Logs",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [],
+      "used": 1
+    },
+    {
+      "name": "Settlement Assault Plans",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Settlement Defence Plans",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Smear Campaign Plans",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "HAB buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 1
+    },
+    {
+      "name": "Spectral Analysis Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "CMD buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 17
+    },
+    {
+      "name": "Stellar Activity Logs",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "CMD buildings",
+        "AGRI buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 6
+    },
+    {
+      "name": "Suit Schematic",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "STO buildings",
+        "PWR buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 12
+    },
+    {
+      "name": "Surveillance Equipment",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "STO buildings",
+        "EXT buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 4
+    },
+    {
+      "name": "Surveillance Logs",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Tactical Plans",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Topographical Surveys",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "RES buildings",
+        "IND buildings",
+        "Crashed satellite",
+        "Mission reward"
+      ],
+      "used": 10
+    },
+    {
+      "name": "Troop Deployment Records",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 3
+    },
+    {
+      "name": "Weapon Inventory",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 6
+    },
+    {
+      "name": "Weapon Schematic",
+      "type": "Goods",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "Irregular markers",
+        "STO buildings",
+        "PWR buildings",
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 44
+    },
+    {
+      "name": "Weapon Test Data",
+      "type": "Data",
+      "subtype": "Odyssey",
+      "grade": "",
+      "locations": [
+        "CMD buildings",
+        "Mission reward"
+      ],
+      "used": 18
+    }
+  ]
+}

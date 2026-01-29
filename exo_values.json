@@ -1,0 +1,915 @@
+{
+  "schema": "edapp.exobiology.values.v1",
+  "meta": {
+    "purpose": "Base payout values for exobiology species (Vista Genomics). No multipliers.",
+    "source_note": "Built from user-provided ExoValues.xlsx (manual extraction from reference sites).",
+    "last_updated_utc": "2025-12-31T19:05:26Z",
+    "count_species": 118
+  },
+  "species": {
+    "Aleoida Arcus": {
+      "base_value": 7252500,
+      "genus": "Aleoida",
+      "ccr_m": 150,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Aleoida Coronamus": {
+      "base_value": 6284600,
+      "genus": "Aleoida",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Aleoida Gravis": {
+      "base_value": 12934900,
+      "genus": "Aleoida",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Aleoida Laminiae": {
+      "base_value": 3385200,
+      "genus": "Aleoida",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Aleoida Spica": {
+      "base_value": 3385200,
+      "genus": "Aleoida",
+      "ccr_m": 150,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Anemone Blatteum Bioluminescent": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Croceum": {
+      "base_value": 3399800,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Luteolum": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Prasinum Bioluminescent": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Puniceum": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Roseum": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Roseum Bioluminescent": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Anemone Rubeum Bioluminescent": {
+      "base_value": 1499900,
+      "genus": "Anemone",
+      "ccr_m": 100,
+      "traits": [
+        "B or O-Class Stars"
+      ]
+    },
+    "Bacterium Acies": {
+      "base_value": 1000000,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Neon"
+      ]
+    },
+    "Bacterium Alcyoneum": {
+      "base_value": 1658500,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Bacterium Aurasus": {
+      "base_value": 1000000,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Bacterium Bullaris": {
+      "base_value": 1152500,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Methane",
+        "Ice World"
+      ]
+    },
+    "Bacterium Cerbrus": {
+      "base_value": 1689800,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Water",
+        "SO2"
+      ]
+    },
+    "Bacterium Informem": {
+      "base_value": 8418000,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Nitrogen"
+      ]
+    },
+    "Bacterium Nebulus": {
+      "base_value": 9116600,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Helium"
+      ]
+    },
+    "Bacterium Omentum": {
+      "base_value": 4638900,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Nitrogen",
+        "Volcanism"
+      ]
+    },
+    "Bacterium Scopulum": {
+      "base_value": 8633800,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "CO2",
+        "Volcanism"
+      ]
+    },
+    "Bacterium Tela": {
+      "base_value": 1949000,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Helium",
+        "Volcanism",
+        "SO2"
+      ]
+    },
+    "Bacterium Verrata": {
+      "base_value": 3897000,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Water",
+        "Volcanism"
+      ]
+    },
+    "Bacterium Vesicula": {
+      "base_value": 1000000,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Argon"
+      ]
+    },
+    "Bacterium Volu": {
+      "base_value": 7774700,
+      "genus": "Bacterium",
+      "ccr_m": 500,
+      "traits": [
+        "Oxygen"
+      ]
+    },
+    "Brain Tree Aureum": {
+      "base_value": 3565100,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Gypseeum": {
+      "base_value": 3565100,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Lindigoticum": {
+      "base_value": 3565100,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Lividum": {
+      "base_value": 1593700,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Ostrinum": {
+      "base_value": 3565100,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Puniceum": {
+      "base_value": 3565100,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Roseum": {
+      "base_value": 1593700,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Brain Tree Viride": {
+      "base_value": 1593700,
+      "genus": "Brain Tree",
+      "ccr_m": 100,
+      "traits": [
+        "Guardian Sites"
+      ]
+    },
+    "Cactoida Cortexum": {
+      "base_value": 3667600,
+      "genus": "Cactoida",
+      "ccr_m": 300,
+      "traits": [
+        "Orion-Cygnus Spiral Arm"
+      ]
+    },
+    "Cactoida Lapis": {
+      "base_value": 2483600,
+      "genus": "Cactoida",
+      "ccr_m": 300,
+      "traits": [
+        "Outer Scutum Spiral Arm",
+        "Ammonia"
+      ]
+    },
+    "Cactoida Peperatis": {
+      "base_value": 2483600,
+      "genus": "Cactoida",
+      "ccr_m": 300,
+      "traits": [
+        "Inner Scutum Spiral Arm"
+      ]
+    },
+    "Cactoida Pullulanta": {
+      "base_value": 3667600,
+      "genus": "Cactoida",
+      "ccr_m": 300,
+      "traits": [
+        "Perseus Spiral Arm"
+      ]
+    },
+    "Cactoida Vermis": {
+      "base_value": 16202800,
+      "genus": "Cactoida",
+      "ccr_m": 300,
+      "traits": [
+        "Norma Spiral Arm",
+        "Water Based Rocky World."
+      ]
+    },
+    "Clypeus Lacrimam": {
+      "base_value": 8418000,
+      "genus": "Clypeus",
+      "ccr_m": 150,
+      "traits": [
+        "Water based rocky world."
+      ]
+    },
+    "Clypeus Margaritus": {
+      "base_value": 11873200,
+      "genus": "Clypeus",
+      "ccr_m": 150,
+      "traits": [
+        "H\u00b2O"
+      ]
+    },
+    "Clypeus Speculumi": {
+      "base_value": 16202800,
+      "genus": "Clypeus",
+      "ccr_m": 150,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Concha Aureolas": {
+      "base_value": 7774700,
+      "genus": "Concha",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Concha Biconcavis": {
+      "base_value": 16777215,
+      "genus": "Concha",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Concha Labiata": {
+      "base_value": 2352400,
+      "genus": "Concha",
+      "ccr_m": 150,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Concha Renibus": {
+      "base_value": 4572400,
+      "genus": "Concha",
+      "ccr_m": 150,
+      "traits": [
+        "CO2",
+        "H2O"
+      ]
+    },
+    "Electricae Pluma": {
+      "base_value": 6284600,
+      "genus": "Electricae",
+      "ccr_m": 1000,
+      "traits": [
+        "White Dwarfs",
+        "Neutron Star"
+      ]
+    },
+    "Electricae Radialem": {
+      "base_value": 6284600,
+      "genus": "Electricae",
+      "ccr_m": 1000,
+      "traits": [
+        "White Dwarfs"
+      ]
+    },
+    "Fonticulua Campestris": {
+      "base_value": 1000000,
+      "genus": "Fonticulua",
+      "ccr_m": 500,
+      "traits": [
+        "Argon"
+      ]
+    },
+    "Fonticulua Digitos": {
+      "base_value": 1804100,
+      "genus": "Fonticulua",
+      "ccr_m": 500,
+      "traits": [
+        "Methane",
+        "Ice World"
+      ]
+    },
+    "Fonticulua Fluctus": {
+      "base_value": 16777215,
+      "genus": "Fonticulua",
+      "ccr_m": 500,
+      "traits": []
+    },
+    "Fonticulua Lapida": {
+      "base_value": 3111000,
+      "genus": "Fonticulua",
+      "ccr_m": 500,
+      "traits": [
+        "Nitrogen"
+      ]
+    },
+    "Fonticulua Segmentatus": {
+      "base_value": 19010800,
+      "genus": "Fonticulua",
+      "ccr_m": 500,
+      "traits": [
+        "Neon",
+        "Neon-Rich"
+      ]
+    },
+    "Fonticulua Upupam": {
+      "base_value": 5727600,
+      "genus": "Fonticulua",
+      "ccr_m": 500,
+      "traits": [
+        "Argon-Rich"
+      ]
+    },
+    "Frutexa Acus": {
+      "base_value": 7774700,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Frutexa Collum": {
+      "base_value": 1639800,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Frutexa Fera": {
+      "base_value": 1632500,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Frutexa Flabellum": {
+      "base_value": 1808900,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Frutexa Flammasis": {
+      "base_value": 10326000,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": [
+        "Rocky world",
+        "ammonia"
+      ]
+    },
+    "Frutexa Metallicum": {
+      "base_value": 1632500,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": [
+        "CO2",
+        "Ammonia"
+      ]
+    },
+    "Frutexa Sponsae": {
+      "base_value": 5988000,
+      "genus": "Frutexa",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Fumerola Aquatis": {
+      "base_value": 6284600,
+      "genus": "Fumerola",
+      "ccr_m": 100,
+      "traits": [
+        "Argon",
+        "Rocky Ice World"
+      ]
+    },
+    "Fumerola Carbosis": {
+      "base_value": 6284600,
+      "genus": "Fumerola",
+      "ccr_m": 100,
+      "traits": [
+        "CO2",
+        "Geysers",
+        "Methane",
+        "SO2"
+      ]
+    },
+    "Fumerola Extremus": {
+      "base_value": 16202800,
+      "genus": "Fumerola",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Fumerola Nitris": {
+      "base_value": 7500900,
+      "genus": "Fumerola",
+      "ccr_m": 100,
+      "traits": [
+        "Argon rich"
+      ]
+    },
+    "Fungoida Bullarum": {
+      "base_value": 3703200,
+      "genus": "Fungoida",
+      "ccr_m": 300,
+      "traits": [
+        "Argon"
+      ]
+    },
+    "Fungoida Gelata": {
+      "base_value": 3330300,
+      "genus": "Fungoida",
+      "ccr_m": 300,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Fungoida Setisis": {
+      "base_value": 1670100,
+      "genus": "Fungoida",
+      "ccr_m": 300,
+      "traits": [
+        "Ammonia",
+        "Methane"
+      ]
+    },
+    "Fungoida Stabitis": {
+      "base_value": 2680300,
+      "genus": "Fungoida",
+      "ccr_m": 300,
+      "traits": [
+        "H2O"
+      ]
+    },
+    "Osseus Cornibus": {
+      "base_value": 1483000,
+      "genus": "Osseus",
+      "ccr_m": 800,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Osseus Discus": {
+      "base_value": 12934900,
+      "genus": "Osseus",
+      "ccr_m": 800,
+      "traits": [
+        "Geological Activity"
+      ]
+    },
+    "Osseus Fractus": {
+      "base_value": 4027800,
+      "genus": "Osseus",
+      "ccr_m": 800,
+      "traits": []
+    },
+    "Osseus Pellebantus": {
+      "base_value": 9739000,
+      "genus": "Osseus",
+      "ccr_m": 800,
+      "traits": []
+    },
+    "Osseus Pumice": {
+      "base_value": 3156300,
+      "genus": "Osseus",
+      "ccr_m": 800,
+      "traits": [
+        "Argon",
+        "Methane"
+      ]
+    },
+    "Osseus Spiralis": {
+      "base_value": 2404700,
+      "genus": "Osseus",
+      "ccr_m": 800,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Recepta Conditivus": {
+      "base_value": 14313700,
+      "genus": "Recepta",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Recepta Deltahedronix": {
+      "base_value": 16202800,
+      "genus": "Recepta",
+      "ccr_m": 150,
+      "traits": [
+        "SO2"
+      ]
+    },
+    "Recepta Umbrux": {
+      "base_value": 12934900,
+      "genus": "Recepta",
+      "ccr_m": 150,
+      "traits": []
+    },
+    "Sinuous Tuber Albidum": {
+      "base_value": 3425600,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Blatteum": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Caeruleum": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Lindigoticum": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Prasinum": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Roseus": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Violaceum": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Sinuous Tuber Viride": {
+      "base_value": 1514500,
+      "genus": "Sinuous Tuber",
+      "ccr_m": 100,
+      "traits": []
+    },
+    "Stratum Araneamus": {
+      "base_value": 2448900,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": []
+    },
+    "Stratum Cucumisis": {
+      "base_value": 16202800,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": []
+    },
+    "Stratum Excutitus": {
+      "base_value": 2448900,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": [
+        "CO\u00b2"
+      ]
+    },
+    "Stratum Frigus": {
+      "base_value": 2637500,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": []
+    },
+    "Stratum Laminamus": {
+      "base_value": 2788300,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Stratum Limaxus": {
+      "base_value": 1362000,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Stratum Paleas": {
+      "base_value": 1362000,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": [
+        "Ammonia",
+        "CO2"
+      ]
+    },
+    "Stratum Tectonicas": {
+      "base_value": 19010800,
+      "genus": "Stratum",
+      "ccr_m": 500,
+      "traits": [
+        "High Metal Content Planets",
+        "CO2",
+        "O2",
+        "SO2",
+        "Ammonia"
+      ]
+    },
+    "Thargoid Coral Root": {
+      "base_value": 1924600,
+      "genus": "Thargoid",
+      "ccr_m": 100,
+      "traits": [
+        "Thargoid Spire"
+      ]
+    },
+    "Thargoid Coral Tree": {
+      "base_value": 1896800,
+      "genus": "Thargoid",
+      "ccr_m": 100,
+      "traits": [
+        "Thargoid Spire"
+      ]
+    },
+    "Thargoid Mega Barnacles": {
+      "base_value": 2313500,
+      "genus": "Thargoid",
+      "ccr_m": 100,
+      "traits": [
+        "Thargoid Spire"
+      ]
+    },
+    "Thargoid Spires": {
+      "base_value": 2247100,
+      "genus": "Thargoid",
+      "ccr_m": 100,
+      "traits": [
+        "Thargoid Spire"
+      ]
+    },
+    "Tubus Cavas": {
+      "base_value": 11873200,
+      "genus": "Tubus",
+      "ccr_m": 800,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Tubus Compagibus": {
+      "base_value": 7774700,
+      "genus": "Tubus",
+      "ccr_m": 800,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Tubus Conifer": {
+      "base_value": 2415500,
+      "genus": "Tubus",
+      "ccr_m": 800,
+      "traits": []
+    },
+    "Tubus Rosarium": {
+      "base_value": 2637500,
+      "genus": "Tubus",
+      "ccr_m": 800,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Tubus Sororibus": {
+      "base_value": 5727600,
+      "genus": "Tubus",
+      "ccr_m": 800,
+      "traits": []
+    },
+    "Tussock Albata": {
+      "base_value": 3252500,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Tussock Capillum": {
+      "base_value": 7025800,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "Argon"
+      ]
+    },
+    "Tussock Caputus": {
+      "base_value": 3472400,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": []
+    },
+    "Tussock Catena": {
+      "base_value": 1766600,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": []
+    },
+    "Tussock Cultro": {
+      "base_value": 1766600,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Tussock Divisa": {
+      "base_value": 1766600,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "Ammonia"
+      ]
+    },
+    "Tussock Ignis": {
+      "base_value": 1849000,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Tussock Pennata": {
+      "base_value": 5853800,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": []
+    },
+    "Tussock Pennatis": {
+      "base_value": 1000000,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Tussock Propagito": {
+      "base_value": 1000000,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": []
+    },
+    "Tussock Serrati": {
+      "base_value": 4447100,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "CO2"
+      ]
+    },
+    "Tussock Stigmasis": {
+      "base_value": 19010800,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "SO2"
+      ]
+    },
+    "Tussock Triticum": {
+      "base_value": 7774700,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": []
+    },
+    "Tussock Ventusa": {
+      "base_value": 3277700,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": []
+    },
+    "Tussock Virgam": {
+      "base_value": 14313700,
+      "genus": "Tussock",
+      "ccr_m": 200,
+      "traits": [
+        "H2O"
+      ]
+    }
+  }
+}

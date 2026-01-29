@@ -2210,7 +2210,11 @@ class MainWindow(QMainWindow):
             if isinstance(states, list) and states:
                 st = states[0]
                 if isinstance(st, dict):
-                    state = fmt.text(st.get("State_Localised") or st.get("State") or "", default="")
+                    # Prefer Localised label; otherwise normalize Frontier token-ish values
+                    state = fmt.text(
+                        st.get("State_Localised") or self._norm_token(st.get("State")) or st.get("State") or "",
+                        default="",
+                    )
 
             rep = f.get("MyReputation")
 

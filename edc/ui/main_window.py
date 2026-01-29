@@ -588,7 +588,7 @@ class MainWindow(QMainWindow):
             try:
                 self._refresh_hud()
             except Exception:
-                pass
+                log.exception("UI refresh error (fallback)")
 
     def _do_hud_refresh(self):
         """Timer callback for the debounced HUD refresh."""
@@ -596,7 +596,7 @@ class MainWindow(QMainWindow):
         try:
             self._refresh_hud()
         except Exception:
-            pass
+            log.exception("UI refresh error")
 
     def _refresh_hud(self):
         parts = []
@@ -1935,7 +1935,18 @@ class MainWindow(QMainWindow):
         for r, (_sv, b, pc, ls_txt, bio_txt, geo_txt, genera_txt, v_txt, tags_txt) in enumerate(shown):
             self.exploration_table.setItem(r, 0, QTableWidgetItem(str(b)))
             self.exploration_table.setItem(r, 1, QTableWidgetItem(str(pc)))
-            self.exploration_table.setItem(r, 2, QTableWidgetItem(str(ls_txt)))
+            # Ensure numeric sorting on the "LS" column (avoid lexicographic sort like "100" < "9")
+            it_ls = QTableWidgetItem(str(ls_txt))
+            try:
+                s = str(ls_txt).replace("LS", "").strip()
+                # Keep only digits/dot/minus (robust against "12,345 LS")
+                s = s.replace(",", "")
+                v = float(s) if s else None
+                if v is not None:
+                    it_ls.setData(Qt.ItemDataRole.UserRole, v)
+            except Exception:
+                pass
+            self.exploration_table.setItem(r, 2, it_ls)
             self.exploration_table.setItem(r, 3, QTableWidgetItem(str(bio_txt)))
             self.exploration_table.setItem(r, 4, QTableWidgetItem(str(geo_txt)))
             self.exploration_table.setItem(r, 5, QTableWidgetItem(str(genera_txt)))

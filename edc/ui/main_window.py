@@ -430,6 +430,13 @@ class MainWindow(QMainWindow):
         self.inv_kind.currentIndexChanged.connect(self._refresh_materials_inventory)
         self.inv_filter.textChanged.connect(self._refresh_materials_inventory)
         self.ody_filter.textChanged.connect(self._refresh_shiplocker_inventory)
+
+        # ---- UI refresh debounce (journal bursts can be spammy) ----
+        self._hud_refresh_pending = False
+        self._hud_refresh_timer = QTimer(self)
+        self._hud_refresh_timer.setSingleShot(True)
+        self._hud_refresh_timer.timeout.connect(self._do_hud_refresh)
+
         self._refresh_hud()
         self._auto_start_if_configured()
 
@@ -564,7 +571,32 @@ class MainWindow(QMainWindow):
         self.state = state
         for m in msgs:
             self._append(m)
-        self._refresh_hud()
+        self._schedule_hud_refresh()
+
+    def _schedule_hud_refresh(self):
+        """Coalesce multiple rapid journal events into a single UI refresh."""
+        try:
+            if self._hud_refresh_pending:
+                return
+            self._hud_refresh_pending = True
+
+            # 75ms feels "live" but avoids thrashing during FSS/DSS bursts.
+            self._hud_refresh_timer.start(75)
+        except Exception:
+            # Worst case: fall back to immediate refresh
+            self._hud_refresh_pending = False
+            try:
+                self._refresh_hud()
+            except Exception:
+                pass
+
+    def _do_hud_refresh(self):
+        """Timer callback for the debounced HUD refresh."""
+        self._hud_refresh_pending = False
+        try:
+            self._refresh_hud()
+        except Exception:
+            pass
 
     def _refresh_hud(self):
         parts = []

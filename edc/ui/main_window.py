@@ -24,7 +24,6 @@ from PyQt6.QtWidgets import (
 from PyQt6.QtCore import QThread, Qt, QTimer
 from PyQt6.QtGui import QTextCursor
 from pathlib import Path
-from edc.ui import formatting as fmt
 
 from edc.core.state import GameState
 from edc.core.event_engine import EventEngine
@@ -688,7 +687,8 @@ class MainWindow(QMainWindow):
 
                 if action:
                     # Keep formatting consistent with the earlier PP action text.
-                    self._pp_action_text = f"PP Action: {action}"
+                    if not self._pp_action_text:
+                        self._pp_action_text = f"PP Action: {action}"
         except Exception:
             pass
 
@@ -1942,13 +1942,14 @@ class MainWindow(QMainWindow):
                 for s in sigs:
                     if not isinstance(s, dict):
                         continue
-                    cat = s.get("Category") if isinstance(s.get("Category"), str) else "Other"
+                    cat_raw = s.get("Category") if isinstance(s.get("Category"), str) else "Other"
+                    cat = self._norm_token(cat_raw) or "Other"
                     if cat not in cats:
                         cat = "Other"
                     cats[cat].append(s)
                     cat_counts[cat] += 1
                     if cat == "USS":
-                        u = (s.get("USSType") or "").strip()
+                        u = self._norm_token(s.get("USSType") or "")
                         if u:
                             uss_counts[u] = uss_counts.get(u, 0) + 1
 
@@ -1977,9 +1978,9 @@ class MainWindow(QMainWindow):
                     for s in cats[cat]:
                         if used >= max_lines:
                             break
-                        nm = s.get("SignalName") or "Signal"
-                        stype = (s.get("SignalType") or "").strip() if isinstance(s.get("SignalType"), str) else ""
-                        uss = s.get("USSType") or ""
+                        nm = self._norm_token(s.get("SignalName") or "Signal") or "Signal"
+                        stype = self._norm_token(s.get("SignalType") or "")
+                        uss = self._norm_token(s.get("USSType") or "")
                         tl = s.get("ThreatLevel")
                         tr = s.get("TimeRemaining")
                         bits = [str(nm)]
@@ -2132,6 +2133,35 @@ class MainWindow(QMainWindow):
             # Never break the UI refresh loop.
             self.materials_box.setPlainText("")
 
+    def _norm_token(self, value):
+        """Normalize Frontier-style token strings for display.
+
+        Examples:
+          '$SYSTEM_SECURITY_low;' -> 'Low'
+          '$economy_Extraction;'  -> 'Extraction'
+          '$government_Corporate;' -> 'Corporate'
+        """
+        s = fmt.text(value)
+        if not s:
+            return ""
+        s = s.strip()
+        if s.endswith(";"):
+            s = s[:-1].strip()
+        if s.startswith("$"):
+            s = s[1:]
+        # Drop common token prefixes, keep the meaningful tail
+        if "_" in s:
+            parts = [p for p in s.split("_") if p]
+            if parts:
+                s = parts[-1]
+        s = s.replace("_", " ").strip()
+        if not s:
+            return ""
+        # Preserve ALLCAPS abbreviations, otherwise Title-case first letter only
+        if s.isupper():
+            return s
+        return s[:1].upper() + s[1:]
+
     def _refresh_system_card(self):
         if not self.state.system:
             self.system_card.setPlainText("No system data yet.")
@@ -2145,9 +2175,9 @@ class MainWindow(QMainWindow):
 
         meta = []
         allegiance = fmt.text(getattr(self.state, "system_allegiance", None))
-        government = fmt.text(getattr(self.state, "system_government", None))
-        security = fmt.text(getattr(self.state, "system_security", None))
-        economy = fmt.text(getattr(self.state, "system_economy", None))
+        government = self._norm_token(getattr(self.state, "system_government", None))
+        security = self._norm_token(getattr(self.state, "system_security", None))
+        economy = self._norm_token(getattr(self.state, "system_economy", None))
         population = fmt.int_commas(getattr(self.state, "population", None))
 
         if allegiance:

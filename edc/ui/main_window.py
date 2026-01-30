@@ -1586,6 +1586,13 @@ class MainWindow(QMainWindow):
         # Track which (body, genus) already has a real ScanOrganic record so we can still show remaining DSS genuses.
         real_body_genus_name = set()  # (BodyName, Genus)
         real_body_genus_id = set()    # (BodyID, Genus)
+ 
+        # Track which (body, genus) is already present via CODEX so we can suppress
+        # CODEX duplicates when we already have a better "real" row (ScanOrganic) or DSS target row.
+        # We track both BodyID and normalized BodyName keys for robustness.
+        codex_body_genus_id = set()    # (BodyID, Genus)
+        codex_body_genus_name = set()  # (BodyNameNorm, Genus)
+
         # Track which (body, genus) already has a row emitted (real ScanOrganic OR DSS target).
         # Used to suppress CODEX duplicates when we already have a better row to show.
         listed_body_genus_name = set()  # (BodyName, Genus)
@@ -1626,10 +1633,14 @@ class MainWindow(QMainWindow):
                     codex_hint_id[(body_id, gk)] = sp
                     if vv:
                         codex_hint_var_id[(body_id, gk)] = vv
+                    # Mark CODEX presence for (BodyID, Genus)
+                    codex_body_genus_id.add((body_id, gk))
                 if bn:
                     codex_hint_name[(bn, gk)] = sp
                     if vv:
                         codex_hint_var_name[(bn, gk)] = vv
+                    # Mark CODEX presence for (BodyNameNorm, Genus)
+                    codex_body_genus_name.add((bn, gk))
 
                 # Also capture best-known base/potential value from the CODEX record for DSS rows.
                 bv = rec.get("BaseValue")

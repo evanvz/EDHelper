@@ -1387,7 +1387,7 @@ class MainWindow(QMainWindow):
 
         # Action hint (short, generic, and honest)
         s = str(pp_state or "").strip().lower()
-            action = self._derive_pp_action(pledged, ctrl, pp_state, powers)
+        action = self._derive_pp_action(pledged, ctrl, pp_state, powers)
 
         self.pp_actions.setText(f"Recommended: {action}" if action else "")
 
@@ -1462,9 +1462,9 @@ class MainWindow(QMainWindow):
             """
             Normalize "Variant" display to the short color/name part.
             Examples:
-              "Stratum Tectonicas - Green" -> "Green"
-              "Bacterium Cerbrus - Teal"   -> "Teal"
-              "Teal"                       -> "Teal"
+            "Stratum Tectonicas - Green" -> "Green"
+            "Bacterium Cerbrus - Teal"   -> "Teal"
+            "Teal"                       -> "Teal"
             """
             if not isinstance(v, str):
                 return ""

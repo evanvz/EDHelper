@@ -7,6 +7,9 @@ import logging
 
 log = logging.getLogger("edc.config")
 
+# Settings schema version (keep in sync with _migrate_settings)
+SCHEMA_VERSION = 2
+
 def default_app_dir() -> Path:
     """
     Portable-in-repo runtime directory.

@@ -20,6 +20,9 @@ class ExternalIntel:
         self._addresses: Dict[str, List[Dict[str, Any]]] = {}
         self._load(force=True)
 
+    def _k(self, system_name: str) -> str:
+        return (system_name or "").strip().lower()
+
     def _load(self, force: bool = False) -> None:
         try:
             if not self.path.exists():
@@ -41,8 +44,24 @@ class ExternalIntel:
                 systems = data.get("systems") or {}
                 addrs = data.get("system_addresses") or {}
 
-            self._systems = systems if isinstance(systems, dict) else {}
+            # Normalize system keys for case-insensitive matching
+            norm_systems: Dict[str, Any] = {}
+            if isinstance(systems, dict):
+                for k, v in systems.items():
+                    if not isinstance(k, str):
+                        continue
+                    nk = self._k(k)
+                    if not nk:
+                        continue
+                    # Merge lists if duplicates exist under different casing
+                    if nk in norm_systems and isinstance(norm_systems[nk], list) and isinstance(v, list):
+                        norm_systems[nk].extend(v)
+                    else:
+                        norm_systems[nk] = v
+
+            self._systems = norm_systems
             self._addresses = addrs if isinstance(addrs, dict) else {}
+
         except Exception:
             log.exception("Failed to load external_pois.json")
             self._systems = {}
@@ -60,7 +79,8 @@ class ExternalIntel:
                 if isinstance(recs, list):
                     out.extend([r for r in recs if isinstance(r, dict)])
 
-            recs2 = self._systems.get(system_name) or []
+            key = self._k(system_name)
+            recs2 = self._systems.get(key) or []
             if isinstance(recs2, list):
                 out.extend([r for r in recs2 if isinstance(r, dict)])
         except Exception:

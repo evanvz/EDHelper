@@ -598,6 +598,46 @@ class MainWindow(QMainWindow):
         except Exception:
             log.exception("UI refresh error")
 
+    def _derive_pp_action(self, pledged, ctrl, pp_state, powers):
+        """
+        Single authority for "what should I do here?" PowerPlay action text.
+        Keeps HUD + PowerPlay tab consistent and avoids drift.
+        """
+        if not pledged:
+            return ""
+
+        friendly = bool(ctrl and ctrl == pledged)
+        enemy = bool(ctrl and ctrl != pledged)
+        st = (pp_state or "").strip()
+        pows = powers if isinstance(powers, list) else []
+
+        # State-driven guidance first (more specific)
+        if st in ("Fortified", "Stronghold"):
+            if friendly:
+                return "Fortify/defend: run PP logistics and defensive activities for your power."
+            if enemy:
+                return "Enemy Stronghold: expect PP opposition; avoid or undermine (if you choose)."
+            return "Fortified/stronghold activity present: stay alert."
+
+        if st == "Contested":
+            if friendly:
+                return "Contested: support your power’s conflict effort here."
+            if enemy:
+                return "Contested (enemy): higher risk; avoid or oppose (if you choose)."
+            return "Contested: higher risk; PP conflict activity likely."
+
+        if st == "Unoccupied":
+            if pledged in pows:
+                return "Unoccupied: your power is present; watch progress and support objectives if desired."
+            return "Unoccupied: no clear PP objective; treat as neutral space."
+
+        # Fallback guidance if we have relationship but no specific state
+        if enemy:
+            return "Enemy space: stay alert for PP opposition."
+        if friendly:
+            return "Friendly space: PP objectives may be available."
+        return ""
+
     def _refresh_hud(self):
         parts = []
         lines = []
@@ -639,43 +679,9 @@ class MainWindow(QMainWindow):
             ctrl = getattr(self.state, "system_controlling_power", None)
             pp_state = getattr(self.state, "system_powerplay_state", None) or ""
             powers = getattr(self.state, "system_powers", None) or []
-
-            if pledged and (ctrl or pp_state or powers):
-                friendly = bool(ctrl and ctrl == pledged)
-                enemy = bool(ctrl and ctrl != pledged)
-                s = str(pp_state).strip().lower()
-
-                action = None
-                # Common PP2.0-ish states seen in journals (e.g., Stronghold, Fortified, Unoccupied)
-                if "stronghold" in s or "fortified" in s:
-                    if friendly:
-                        action = "Fortify/defend: run PP logistics + stay in system for defensive activity"
-                    elif enemy:
-                        action = "Enemy Stronghold: expect PP opposition; avoid or undermine (if you choose)"
-                    else:
-                        action = "Fortified/stronghold activity present: stay alert"
-                elif "contested" in s or "conflict" in s:
-                    if friendly:
-                        action = "Contested: support your power’s conflict effort here"
-                    elif enemy:
-                        action = "Contested (enemy): higher risk; avoid or oppose their effort (if you choose)"
-                    else:
-                        action = "Contested: higher risk; PP conflict activity likely"
-                elif "unoccupied" in s:
-                    # Unoccupied often means no controlling power; can still have powers/progress
-                    if isinstance(powers, list) and pledged in powers:
-                        action = "Unoccupied: your power is present; watch progress and support objectives if desired"
-                    else:
-                        action = "Unoccupied: no clear PP objective; treat as neutral space"
-                else:
-                    # Fallback (unknown state string)
-                    if enemy:
-                        action = "Enemy space: stay alert for PP opposition"
-                    elif friendly:
-                        action = "Friendly space: PP objectives may be available"
-                if action:
-                    # Store for Overview only (do NOT show in HUD). No emoji here (Overview adds it).
-                    self._pp_action_text = f"PP Action: {action}"
+            action = self._derive_pp_action(pledged, ctrl, pp_state, powers)
+            if action:
+                self._pp_action_text = f"PP Action: {action}"
         except Exception:
             pass
 
@@ -1380,32 +1386,7 @@ class MainWindow(QMainWindow):
 
         # Action hint (short, generic, and honest)
         s = str(pp_state or "").strip().lower()
-
-        action = None
-        if "stronghold" in s or "fortified" in s:
-            if friendly:
-                action = "Fortify/defend: run PP logistics and defensive activities for your power."
-            elif enemy:
-                action = "Enemy Stronghold: expect PP opposition; avoid or undermine (if you choose)."
-            else:
-                action = "Fortified/stronghold activity present: stay alert."
-        elif "contested" in s or "conflict" in s:
-            if friendly:
-                action = "Contested: support your power’s conflict effort here."
-            elif enemy:
-                action = "Contested (enemy): higher risk; avoid or oppose (if you choose)."
-            else:
-                action = "Contested: higher risk; PP conflict activity likely."
-        elif "unoccupied" in s:
-            if isinstance(powers, list) and pledged in powers:
-                action = "Unoccupied: your power is present; watch progress and support objectives if desired."
-            else:
-                action = "Unoccupied: no clear PP objective; treat as neutral space."
-        else:
-            if enemy:
-                action = "Enemy space: stay alert for PP opposition."
-            elif friendly:
-                action = "Friendly space: PP objectives may be available."
+            action = self._derive_pp_action(pledged, ctrl, pp_state, powers)
 
         self.pp_actions.setText(f"Recommended: {action}" if action else "")
 

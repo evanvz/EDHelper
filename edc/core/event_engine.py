@@ -794,12 +794,22 @@ class EventEngine:
                 pass
 
             rec = self.state.exo.get(codex_key, {})
+
+            # Add localized fields so UI matching/labels stay consistent with SAASignalsFound.
+            # Example Name_Localised: "Bacterium Cerbrus - Teal"
+            variant_loc = (name_loc or "").strip()
+            species_loc = variant_loc.split(" - ", 1)[0].strip() if variant_loc else ""
+            genus_loc = species_loc.split(" ", 1)[0].strip() if species_loc else ""
+
             rec.update(
                 {
                     "BodyID": body_id,
                     "Genus": genus,
+                    "Genus_Localised": genus_loc,
                     "Species": species_txt,
+                    "Species_Localised": species_loc,
                     "Variant": variant_txt,
+                    "Variant_Localised": variant_loc,
                     "Samples": 0,
                     "Complete": False,
                     "LastScanType": "CODEX",

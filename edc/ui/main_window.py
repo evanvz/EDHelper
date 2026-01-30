@@ -1716,6 +1716,14 @@ class MainWindow(QMainWindow):
                     gk = str(g or "").strip()
                     if not gk:
                         continue
+
+                    # If CODEX already identified the exact organism for this genus, show the detailed CODEX row
+                    # instead of a generic DSS target row.
+                    if (isinstance(body_id, int) and (body_id, gk) in codex_body_genus_id) or (
+                        (_norm_text(body), gk) in codex_body_genus_name
+                    ):
+                        continue
+
                     if (isinstance(body_id, int) and (body_id, gk) in real_body_genus_id) or ((_norm_text(body), gk) in real_body_genus_name):
                         continue
                     pot = genus_max.get(gk)

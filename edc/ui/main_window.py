@@ -34,6 +34,7 @@ from edc.core.external_intel import ExternalIntel
 from edc.core.item_catalog import ItemCatalog
 from edc.core.farming_locations import FarmingLocations
 from edc.ui import formatting as fmt
+from typing import Any, Dict, List, Optional
 
 log = logging.getLogger("edc.ui.main")
 
@@ -431,6 +432,9 @@ class MainWindow(QMainWindow):
         self.inv_filter.textChanged.connect(self._refresh_materials_inventory)
         self.ody_filter.textChanged.connect(self._refresh_shiplocker_inventory)
 
+        # ---- Intel hint suppression (show once per system change) ----
+        self._last_intel_system_key: str = ""
+
         # ---- UI refresh debounce (journal bursts can be spammy) ----
         self._hud_refresh_pending = False
         self._hud_refresh_timer = QTimer(self)
@@ -637,6 +641,96 @@ class MainWindow(QMainWindow):
         if friendly:
             return "Friendly space: PP objectives may be available."
         return ""
+
+    def _format_poi_line(self, poi: Dict[str, Any]) -> str:
+        """One-line, low-noise POI formatting for HUD."""
+        try:
+            title = fmt.text(poi.get("title") or "POI", default="POI")
+            body = fmt.text(poi.get("body") or "", default="")
+            note = fmt.text(poi.get("note") or "", default="")
+            cat = fmt.text(poi.get("category") or "", default="")
+            bits = []
+            if cat:
+                bits.append(cat)
+            bits.append(title)
+            if body:
+                bits.append(f"@ {body}")
+            line = " — ".join([" ".join(bits[:2]).strip(), " ".join(bits[2:]).strip()]).strip(" —")
+            if note:
+                line = f"{line} — {note}"
+            return line.strip()
+        except Exception:
+            return ""
+
+    def _format_farm_line(self, farm: Dict[str, Any]) -> str:
+        """One-line, low-noise farming formatting for HUD."""
+        try:
+            name = fmt.text(farm.get("name") or "Farming", default="Farming")
+            body = fmt.text(farm.get("body") or "", default="")
+            method = fmt.text(farm.get("method") or "", default="")
+            mats = farm.get("key_materials") or farm.get("materials") or []
+            mats_txt = ""
+            if isinstance(mats, list):
+                top = [fmt.text(x, default="") for x in mats][:2]
+                top = [x for x in top if x]
+                if top:
+                    mats_txt = ", ".join(top)
+            bits = [name]
+            if body:
+                bits.append(f"@ {body}")
+            if method:
+                bits.append(method)
+            line = " — ".join([b for b in bits if b])
+            if mats_txt:
+                line = f"{line} (e.g. {mats_txt})"
+            return line.strip()
+        except Exception:
+            return ""
+
+    def _maybe_add_system_intel_hints(self, lines: List[str]) -> None:
+        """Add POI/Farming hints once per system change (non-spammy)."""
+        try:
+            sys_name = fmt.text(getattr(self.state, "system", None), default="").strip()
+            sys_addr = getattr(self.state, "system_address", None)
+            addr_key = str(sys_addr) if isinstance(sys_addr, int) else ""
+            if not sys_name:
+                return
+
+            system_key = f"{sys_name}|{addr_key}"
+            if system_key == self._last_intel_system_key:
+                return
+            self._last_intel_system_key = system_key
+
+            pois = self.external_intel.get_pois(sys_name, sys_addr if isinstance(sys_addr, int) else None) or []
+            farms = self.farming_locations.get_for_system(sys_name) if sys_name else []
+
+            poi_lines = []
+            if isinstance(pois, list):
+                for p in pois[:3]:
+                    if isinstance(p, dict):
+                        s = self._format_poi_line(p)
+                        if s:
+                            poi_lines.append(s)
+
+            farm_lines = []
+            if isinstance(farms, list):
+                for f in farms[:2]:
+                    if isinstance(f, dict):
+                        s = self._format_farm_line(f)
+                        if s:
+                            farm_lines.append(s)
+
+            if poi_lines:
+                lines.append(f"📌 POI: {poi_lines[0]}")
+                for extra in poi_lines[1:]:
+                    lines.append(f"   ↳ {extra}")
+
+            if farm_lines:
+                lines.append(f"⛏️ Farming: {farm_lines[0]}")
+                for extra in farm_lines[1:]:
+                    lines.append(f"   ↳ {extra}")
+        except Exception:
+            log.exception("Failed to add system intel hints")
 
     def _refresh_hud(self):
         parts = []
@@ -993,6 +1087,9 @@ class MainWindow(QMainWindow):
                 lines.append(f"🧰 Action: Low materials stock (≤{low_threshold}) — {total_low} items ({total_zero} zero)")
         except Exception:
             pass
+
+        # System-entry advisory hints (POIs + farming), once per system change
+        self._maybe_add_system_intel_hints(lines)
 
         # External intel (advisory only)
         try:

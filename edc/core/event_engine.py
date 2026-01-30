@@ -552,6 +552,9 @@ class EventEngine:
                 rec["BodyID"] = body_id
             rec["BioSignals"] = bio
             rec["GeoSignals"] = geo
+            # IMPORTANT: preserve DSS-confirmed genera if we already have them.
+            # FSSBodySignals can arrive after SAASignalsFound and would otherwise overwrite the body record.
+            rec["BioGenuses"] = self.state.bio_genuses.get(body, rec.get("BioGenuses", []))
             self.state.bodies[body] = rec
 
         elif name == "SAASignalsFound":

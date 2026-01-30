@@ -1091,23 +1091,6 @@ class MainWindow(QMainWindow):
         # System-entry advisory hints (POIs + farming), once per system change
         self._maybe_add_system_intel_hints(lines)
 
-        # External intel (advisory only)
-        try:
-            pois = getattr(self.state, "external_pois", None) or []
-            if isinstance(pois, list) and pois:
-                lines.append(f"📌 Intel: {len(pois)} external POIs (advisory)")
-        except Exception:
-            pass
-
-        # Farming locations (advisory only; system-match)
-        try:
-            sys_name = getattr(self.state, "system", None) or ""
-            farms = self.farming_locations.get_for_system(sys_name) if sys_name else []
-            if isinstance(farms, list) and farms:
-                lines.append(f"⛏️ Intel: {len(farms)} known farming locations in-system (advisory)")
-        except Exception:
-            pass
-
         # Mirror only the action lines into Overview (clickable links to tabs)
         try:
             html_lines = []

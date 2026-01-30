@@ -679,6 +679,7 @@ class MainWindow(QMainWindow):
             ctrl = getattr(self.state, "system_controlling_power", None)
             pp_state = getattr(self.state, "system_powerplay_state", None) or ""
             powers = getattr(self.state, "system_powers", None) or []
+
             action = self._derive_pp_action(pledged, ctrl, pp_state, powers)
             if action:
                 self._pp_action_text = f"PP Action: {action}"

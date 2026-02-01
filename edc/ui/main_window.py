@@ -1486,6 +1486,32 @@ class MainWindow(QMainWindow):
             self.pp_progress.setItem(r, 1, QTableWidgetItem(f"{v*100:.2f}%"))
 
     def _refresh_exobiology(self):
+         # Ensure FSS-only bio targets show even if handler refactors update
+         # state.bio_signals without creating/updating the corresponding body record.
+         try:
+             if not isinstance(self.state.bodies, dict):
+                 self.state.bodies = {}
+ 
+             bio_map = getattr(self.state, "bio_signals", {}) or {}
+             genus_map = getattr(self.state, "bio_genuses", {}) or {}
+             geo_map = getattr(self.state, "geo_signals", {}) or {}
+ 
+             for body_name, bio_cnt in bio_map.items():
+                 if not isinstance(body_name, str) or not body_name.strip():
+                     continue
+                 rec = self.state.bodies.get(body_name)
+                 if not isinstance(rec, dict):
+                     rec = {"BodyName": body_name, "BodyID": None}
+                 if isinstance(bio_cnt, int):
+                     rec["BioSignals"] = bio_cnt
+                 if body_name in genus_map:
+                     rec["BioGenuses"] = genus_map.get(body_name, []) or []
+                 if body_name in geo_map:
+                     rec["GeoSignals"] = geo_map.get(body_name, 0) or 0
+                 self.state.bodies[body_name] = rec
+         except Exception:
+             pass
+ 
         # Show Exobiology targets as soon as BioSignals exist (FSS), even before ScanOrganic.
         has_bio_targets = False
         for _b, _rec in (self.state.bodies or {}).items():

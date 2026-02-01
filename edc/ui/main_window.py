@@ -1754,12 +1754,8 @@ class MainWindow(QMainWindow):
                     if not gk:
                         continue
 
-                    # If CODEX already identified the exact organism for this genus, show the detailed CODEX row
-                    # instead of a generic DSS target row.
-                    if (isinstance(body_id, int) and (body_id, gk) in codex_body_genus_id) or (
-                        (_norm_text(body), gk) in codex_body_genus_name
-                    ):
-                        continue
+                    # If CODEX already identified species/variant for this genus, we do NOT hide the DSS row.
+                    # Instead, we enrich the DSS row below (Species/Variant/BaseValue) and mark it as CODEX.
 
                     if (isinstance(body_id, int) and (body_id, gk) in real_body_genus_id) or ((_norm_text(body), gk) in real_body_genus_name):
                         continue
